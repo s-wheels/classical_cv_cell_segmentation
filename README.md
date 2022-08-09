@@ -1,3 +1,10 @@
+
+## Running The Code
+
+All the code is in the cell_segmentation.ipynb notebook.
+
+Please use pip to install from the requirements file and [download the data](https://bbbc.broadinstitute.org/BBBC020)
+
 In a README, describe a deep learning approach that you would adopt for such task using pseudo code as well as the tools that you would potentially use.
 
 ○ Can we track model/data changes? (is the code and data versioned) ○ Where do these jobs get executed? (locally, in the cloud) ○ How automated is the pipeline? (orchestration tools, CI/CD)
