@@ -66,7 +66,7 @@ If I were restricted to classical CV methods there are a few more approaches I w
 6. **Model Deployment** 
     - The execution environment would depend on the requirements of the project. For training ideally execution would happen on a server or in the cloud with more powerful resources. CI/CD workflow for this project:
         + *Source*: push the code updates. 
-        + *Build*: build the system and run, track the run in Weights & Biases.
+        + *Build*: build the system.
         + *Test*: Creation of robust tests, for ML dev I would consider the specific unit tests, integration tests and data/model tests to create a reliable CI/CD workflow. Data tests would validate the data's properties and model tests would ensure model convergence/fitting as well as any other tests. Previously I have used 'unit tests' for model testing, where we utilised extremely difficult edge cases to test model performance.
         + *Deploy*: Deployment to cloud/server.
         
