@@ -35,9 +35,9 @@ I tried 4 different methods directly implementable with OpenCV.
 | Otsu Threshold  | 0.4439  |
 | Gaussian Otsu Threshold  | 0.4439  |
 | Adaptive Threshold  | 0.2914  |
-
+<!-- 
 ### Further Improvements
-If I were restricted to classical CV methods there are a few more approaches I would investigate:
+If I were restricted to classical CV methods there are a few more approaches I would investigate: -->
 
 ## Deep Learning Segmentation Approach
 
@@ -74,3 +74,5 @@ If we wanted to build a pipeline I may utilise an orchestration tool such as Air
 2. Data Preprocessing/Transformation.
 3. Model Training/Inference.
 4. Model Evaluation.
+
+Implementing CI/CD would allow for rapid iterations of development. Implementing a CI/CD workflow would require the creation of robust tests, for ML dev I would consider the specific unit tests, integration tests and data/model tests to create a reliable CI/CD workflow. Data tests would validate the data's properties and model tests would ensure model convergence/fitting as well as any other tests. Previously I have used 'unit tests' for model testing, where we utilised extremely difficult edge cases to test model performance. CI/CD for ML development has a few unique challenges in tracking models & data which Weights & Biases would assist with.
