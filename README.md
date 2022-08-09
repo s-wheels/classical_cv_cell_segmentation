@@ -68,7 +68,7 @@ I would refactor the code into a sensible directory structure and after the init
 
 The execution environment would depend on the requirements of the project. For training ideally execution would happen on a server or in the cloud with more powerful resources.
 
-If we wanted to build a pipeline I may utilise an orchestration tool such as Airflow which is an open source and can integrate with most cloud providers. I would use Airflow to manage the following stages:
+If we wanted to build a pipeline I may utilise an orchestration tool such as Airflow which is open source and can integrate with most cloud providers. I would use Airflow to manage the following stages:
 
 1. Data Ingestion.
 2. Data Preprocessing/Transformation.
