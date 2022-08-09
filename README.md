@@ -41,26 +41,36 @@ If I were restricted to classical CV methods there are a few more approaches I w
 
 ## Deep Learning Segmentation Approach
 
+### Model & Experiment
+
+1. Investigation - Investigate SOTA approaches that best fit our needs (computational resources, inference time, performance etc). I would use [Papers With Code](https://paperswithcode.com/task/semantic-segmentation) as a first stop to investigate approaches that would be easily implementable.
+
+2. Training Model - After choosing the model, I would ideally use a pretrained model (from HuggingFace, git etc) to start. Pretraining improves performance and reduces training time. I would use PyTorch and augmentation libraries to implement a dataset class for shuffling/augmenting data. This dataset class could be used with either HuggingFace or PyTorch. I would utilise the already developed code for producing inputs (cell images) and the targets (cell masks).
+
+3. Tracking - I would use git for tracking of the code and github for remote storage. I would use Weights & Biases for tracking of: data versioning, model versioning, git commit, environment, experimental results & hyperparameters. I would also use Docker for reproducibility (this can also be used with Weights & Biases).
+
+### Code
+
+I would refactor the code into a sensible directory structure and after the initial experimentation I would utilise python scripts not jupyter notebooks. I would follow standard PEP8 style and I like to use tools such as Black & isort to automate the formatting of my code.
+
 
 ### Tools
 
-- HuggingFace
-- PyTorch
-- Weights & Biases - tracking model/data changes.
-- Git - version control
-- Black & isort - formatting
+- HuggingFace - pretrained models & training.
+- PyTorch - data handling & model training.
+- Weights & Biases - tracking model/data/experiment.
+- Git & Github - version control.
+- Black & isort - formatting code.
+- Docker - environment control.
+- Airflow - orchestration of pipeline.
 
-### Execution
-Where do these jobs get executed? (locally, in the cloud) 
+### Execution & Pipeline
 
-### Pipeline
-How automated is the pipeline? (orchestration tools, CI/CD)
+The execution environment would depend on the requirements of the project. For training ideally execution would happen on a server or in the cloud with more powerful resources.
 
+If we wanted to build a pipeline I may utilise an orchestration tool such as Airflow which is an open source and can integrate with most cloud providers. I would use Airflow to manage the following stages:
 
-### Productisation
-
-- Code maintainablity
-- Code Refactoring
-
-
-● Think about best engineering practice when you prepare the solution (for example code refactoring and productionisation etc.)
+1. Data Ingestion.
+2. Data Preprocessing/Transformation.
+3. Model Training/Inference.
+4. Model Evaluation.
